@@ -5,7 +5,7 @@ test("Handle Alert thats inside a Frame",async({page})=>{
     await page.goto("https://www.w3schools.com/js/tryit.asp?filename=tryjs_confirm")
     let text = "Hi"
     //Event listener
-    await page.on("dialog",alert=>{
+     page.on("dialog",alert=>{
         const type = alert.type()
 
         const defVal= alert.defaultValue();
